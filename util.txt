@@ -1,0 +1,15 @@
+sudo tailscale up --exit-node=100.65.58.39 --accept-routes
+
+Relevant topics:
+/planning/cooperate_commands/ext_request_lane_change_right
+/planning/cooperate_commands/lane_change_right
+
+/planning/enable_auto_node/ext_request_lane_change_right
+/planning/enable_auto_node/lane_change_right
+
+Command service calls:
+
+ros2 service call /planning/cooperate_commands/ext_request_lane_change_left tier4_rtc_msgs/srv/CooperateCommands '{commands:[{"uuid":{uuid:[18, 62, 69, 103, 232, 155, 18, 211, 164, 86, 66, 102, 20, 23, 64, 0]},"module":{"type":"15"}, "command":{"type":"1"}}]}'
+
+ros2 service call /planning/cooperate_commands/lane_change_left tier4_rtc_msgs/srv/CooperateCommands '{commands:[{"uuid":{uuid:[18, 62, 69, 103, 232, 155, 18, 211, 164, 86, 66, 102, 20, 23, 64, 0]},"module":{"type":"1"}, "command":{"type":"1"}}]}'
+
