@@ -1,51 +1,11 @@
 #include <rclcpp/rclcpp.hpp>
 #include <tier4_rtc_msgs/srv/cooperate_commands.hpp>
+#include <tier4_rtc_msgs/msg/cooperate_command.hpp>
 #include <unique_identifier_msgs/msg/uuid.hpp>
 #include <random>
 
 using CooperateCommands = tier4_rtc_msgs::srv::CooperateCommands;
 using UUID = unique_identifier_msgs::msg::UUID;
-
-int main(int argc, char **argv)
-{
-  rclcpp::init(argc, argv);
-  auto node = rclcpp::Node::make_shared("lane_change_request_node");
-
-  // Create a client to call the service
-  auto client = node->create_client<CooperateCommands>("/cooperate_commands");
-
-  // Wait for the service to be available
-  if (!client->wait_for_service(std::chrono::seconds(5))) {
-    RCLCPP_ERROR(node->get_logger(), "Service not available");
-    return 1;
-  }
-
-  // Create the request
-  auto request = std::make_shared<CooperateCommands::Request>();
-
-  // Set a valid UUID for the request
-  UUID uuid;
-  // Generate a valid UUID (pseudo example)
-  uuid.uuid = generateUUID  // Replace with actual generation code
-  autoware_auto_msgs::msg::CooperateCommand command;
-  command.uuid = uuid;
-  command.module = 15;
-  command.direction = 0;  // Force lane change to the right
-
-  request->commands.push_back(command);
-
-  // Send the request
-  auto result = client->async_send_request(request);
-
-  if (rclcpp::spin_until_future_complete(node, result) == rclcpp::FutureReturnCode::SUCCESS) {
-    RCLCPP_INFO(node->get_logger(), "Lane change request sent successfully");
-  } else {
-    RCLCPP_ERROR(node->get_logger(), "Failed to send lane change request");
-  }
-
-  rclcpp::shutdown();
-  return 0;
-}
 
 unique_identifier_msgs::msg::UUID generateUUID() {
   unique_identifier_msgs::msg::UUID uuid_msg;
@@ -58,4 +18,52 @@ unique_identifier_msgs::msg::UUID generateUUID() {
   }
 
   return uuid_msg;
+}
+
+int main(int argc, char **argv)
+{
+  rclcpp::init(argc, argv);
+  if (argc != 1) {
+      RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "usage: add direction of lane change request");
+      return 1;
+  }
+  // Create a client to call the service
+  std::shared_ptr<rclcpp::Node>  node = rclcpp::Node::make_shared("lane_change_request_node");
+  rclcpp::Client<tier4_rtc_msgs::srv::CooperateCommands>::SharedPtr client = 
+    node->create_client<tier4_rtc_msgs::srv::CooperateCommands>("/planning/cooperate_commands/lane_change_right");
+
+  // Wait for the service to be available
+  if (!client->wait_for_service(std::chrono::seconds(5))) {
+    RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Service not available");
+    return 1;
+  }
+
+  // Create the request
+  auto request = std::make_shared<CooperateCommands::Request>();
+  auto command = tier4_rtc_msgs::msg::CooperateCommand();
+  UUID uuid = generateUUID();  // Generate a valid UUID
+  command.uuid = uuid;
+  command.module.type = 16;
+  command.command.type = 0;
+  request->commands.push_back(command);
+
+  // while (client->wait_for_service(std::chrono::seconds(3))) {
+  //   if (!rclcpp::ok()) {
+  //     RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
+  //     return 0;
+  //   }
+  // }
+
+
+  // Send the request
+  auto result = client->async_send_request(request);
+
+  if (rclcpp::spin_until_future_complete(node, result) == rclcpp::FutureReturnCode::SUCCESS) {
+    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Lane change request sent successfully");
+  } else {
+    RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to send lane change request");
+  }
+  
+  rclcpp::shutdown();
+  return 0;
 }
