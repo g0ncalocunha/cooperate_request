@@ -29,16 +29,13 @@
 #include <chrono>
 #include <limits>
 
-enum class LaneChangeDirection
+namespace trajectory_remap_node
 {
-  LEFT,
-  RIGHT
-};
-class TrajectoryRemmaper : public rclcpp::Node
+class TrajectoryRemapper : public rclcpp::Node
 {
   static autoware_auto_planning_msgs::msg::Trajectory modifyTrajectory(
     autoware_auto_planning_msgs::msg::Trajectory &input_trajectory,
-      LaneChangeDirection lane_change_direction, bool acceleration_profile = false)
+      bool lane_change_direction = true, bool acceleration_profile = false)
   {
     if (input_trajectory.points.empty())
     {
@@ -48,7 +45,7 @@ class TrajectoryRemmaper : public rclcpp::Node
     autoware_auto_planning_msgs::msg::Trajectory modified_trajectory = input_trajectory;
 
     // Lane change dpositionirection multiplier
-    double direction_multiplier = (lane_change_direction == LaneChangeDirection::LEFT) ? 1.0 : -1.0;
+    double direction_multiplier = (lane_change_direction == true) ? 1.0 : -1.0;
 
     // Calculate total trajectory time and length
     double total_time = (modified_trajectory.points.back().pose.position.x - modified_trajectory.points.front().pose.position.x) /
@@ -165,13 +162,12 @@ class TrajectoryRemmaper : public rclcpp::Node
   }
 
 public:
-  explicit TrajectoryRemmaper(const rclcpp::NodeOptions &node_options);
+  explicit TrajectoryRemapper(const rclcpp::NodeOptions &node_options);
 
 private:
-void trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory::SharedPtr msg) const;
-
+void trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory::SharedPtr msg);
 rclcpp::Publisher<autoware_auto_planning_msgs::msg::Trajectory>::SharedPtr traj_pub;
 rclcpp::Subscription<autoware_auto_planning_msgs::msg::Trajectory>::SharedPtr traj_sub;
-}
-
+};
+}  // namespace trajectory_remap_node
 #endif // TRAJECTORY_REMMAPER__NODE_HPP_

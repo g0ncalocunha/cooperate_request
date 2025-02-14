@@ -17,21 +17,24 @@
 #include "autoware_auto_planning_msgs/msg/trajectory.hpp"
 #include "autoware_auto_planning_msgs/msg/trajectory_point.hpp"
 
-static LaneChangeDirection lane_change_direction = LaneChangeDirection::LEFT;
+bool lane_change_direction = true;
 bool enable_lane_change = false;
 bool acceleration_profile = false;
 
-TrajectoryRemmaper::TrajectoryRemmaper(const rclcpp::NodeOptions &node_options)
-    : Node("trajectory_remmaper", node_options)
+namespace trajectory_remap_node
+{
+
+TrajectoryRemapper::TrajectoryRemapper(const rclcpp::NodeOptions &node_options)
+    : Node("trajectory_remapper", node_options)
 {
   // interface publisher
   traj_pub = create_publisher<autoware_auto_planning_msgs::msg::Trajectory>("~/output/path", 1);
 
   // interface subscriber
   traj_sub = create_subscription<autoware_auto_planning_msgs::msg::Trajectory>(
-      "~/output/remmaped_path", 1, std::bind(&TrajectoryRemmaper::trajectoryCallback, this, std::placeholders::_1));
+      "~/output/remmaped_path", 1, std::bind(&TrajectoryRemapper::trajectoryCallback, this, std::placeholders::_1));
 }
-// void TrajectoryRemmaper::onPath(const Path::SharedPtr path_ptr)
+// void TrajectoryRemapper::onPath(const Path::SharedPtr path_ptr)
 // {
 //   time_keeper_ptr_->init();
 //   time_keeper_ptr_->tic(__func__);
@@ -86,9 +89,9 @@ TrajectoryRemmaper::TrajectoryRemmaper(const rclcpp::NodeOptions &node_options)
 //   traj_pub_->publish(output_traj_msg);
 // }
 
-void TrajectoryRemmaper::trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory::SharedPtr &msg) const
+void TrajectoryRemapper::trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory::SharedPtr msg)
 {
-  autoware_auto_planning_msgs::msg::Trajectory new_trajectory = msg;
+  autoware_auto_planning_msgs::msg::Trajectory new_trajectory = *msg;
   autoware_auto_planning_msgs::msg::Trajectory modified_trajectory = autoware_auto_planning_msgs::msg::Trajectory();
 
   if (!enable_lane_change)
@@ -99,7 +102,7 @@ void TrajectoryRemmaper::trajectoryCallback(const autoware_auto_planning_msgs::m
   else
   {
     // Direct cmd
-    modified_trajectory = TrajectoryRemmaper::modifyTrajectory(new_trajectory,lane_change_direction, acceleration_profile);
+    modified_trajectory = TrajectoryRemapper::modifyTrajectory(new_trajectory,lane_change_direction, acceleration_profile);
     traj_pub->publish(modified_trajectory);
   }
 }
@@ -135,8 +138,8 @@ int main(int argc, char *argv[])
 
   rclcpp::init(argc, argv);
   rclcpp::NodeOptions options;
-  auto trajectory_remmaper = std::make_shared<TrajectoryRemmaper>(options);
-  rclcpp::spin(trajectory_remmaper);
+  auto trajectory_remapper = std::make_shared<TrajectoryRemapper>(options);
+  rclcpp::spin(trajectory_remapper);
   // rclcpp::executors::MultiThreadedExecutor executor;
   // executor.add_node(node);
   // std::thread executor_thread([&executor]()
@@ -167,3 +170,4 @@ int main(int argc, char *argv[])
 
   return 0;
 }
+} // namespace trajectory_remap_node
