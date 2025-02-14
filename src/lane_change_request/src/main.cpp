@@ -13,28 +13,24 @@
 // limitations under the License.
 
 #include "lane_change_request/lane.hpp"
-#include "lane_change_request/lane.hpp"
 #include "rclcpp/time.hpp"
 #include "autoware_auto_planning_msgs/msg/trajectory.hpp"
+#include "autoware_auto_planning_msgs/msg/trajectory_point.hpp"
 
-LaneChangeDirection lane_change_direction = LEFT;
+static LaneChangeDirection lane_change_direction = LaneChangeDirection::LEFT;
 bool enable_lane_change = false;
 bool acceleration_profile = false;
 
 TrajectoryRemmaper::TrajectoryRemmaper(const rclcpp::NodeOptions &node_options)
-    : Node("trajectory_remmaper", node_options),
-      vehicle_info_(vehicle_info_util::VehicleInfoUtil(*this).getVehicleInfo()),
-      time_keeper_ptr_(std::make_shared<TimeKeeper>())
+    : Node("trajectory_remmaper", node_options)
 {
   // interface publisher
-  traj_pub = create_publisher<autoware_auto_msgs::msg::Trajectory>("~/output/path", 1);
+  traj_pub = create_publisher<autoware_auto_planning_msgs::msg::Trajectory>("~/output/path", 1);
 
   // interface subscriber
-  traj_sub = create_subscription<autoware_auto_msgs::msg::Trajectory>(
-      "~/output/remmaped_path", 1, trajectoryCallback);
-
+  traj_sub = create_subscription<autoware_auto_planning_msgs::msg::Trajectory>(
+      "~/output/remmaped_path", 1, std::bind(&TrajectoryRemmaper::trajectoryCallback, this, std::placeholders::_1));
 }
-
 // void TrajectoryRemmaper::onPath(const Path::SharedPtr path_ptr)
 // {
 //   time_keeper_ptr_->init();
@@ -78,7 +74,7 @@ TrajectoryRemmaper::TrajectoryRemmaper(const rclcpp::NodeOptions &node_options)
 
 //   time_keeper_ptr_->toc(__func__, "");
 //   *time_keeper_ptr_ << "========================================";
-//   time_keeper_ptr_->endLine();
+//   time_keeper_ptr_->std::endline();
 
 //   // publish calculation_time
 //   // NOTE: This function must be called after measuring onPath calculation time
@@ -90,10 +86,10 @@ TrajectoryRemmaper::TrajectoryRemmaper(const rclcpp::NodeOptions &node_options)
 //   traj_pub_->publish(output_traj_msg);
 // }
 
-private:
-void trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory &msg) const
+void TrajectoryRemmaper::trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory &msg) const
 {
   autoware_auto_planning_msgs::msg::Trajectory new_trajectory = msg;
+  autoware_auto_planning_msgs::msg::Trajectory modified_trajectory = autoware_auto_planning_msgs::msg::Trajectory();
 
   if (!enable_lane_change)
   {
@@ -103,7 +99,7 @@ void trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory &msg)
   else
   {
     // Direct cmd
-    autoware_auto_planning_msgs::msg::Trajectory modified_trajectory = TrajectoryRemmaper::modifyTrajectory(new_trajectory);
+    modified_trajectory = TrajectoryRemmaper::modifyTrajectory(new_trajectory,lane_change_direction, acceleration_profile);
     traj_pub->publish(modified_trajectory);
   }
 }
@@ -111,7 +107,7 @@ void trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory &msg)
 int main(int argc, char *argv[])
 {
 
-  cout << "Starting Trajectory-Remapper..." << endl;
+  std::cout << "Starting Trajectory-Remapper..." << std::endl;
 
   // data_mqtt_server data_mqtt = readMqttData();
   // spdlog::debug("MQTT address: {}", data_mqtt.address);
@@ -138,7 +134,8 @@ int main(int argc, char *argv[])
   // spdlog::info("Connected to MQTT server");
 
   rclcpp::init(argc, argv);
-  auto trajectory_remmaper = std::make_shared<TrajectoryRemmaper>();
+  rclcpp::NodeOptions options;
+  auto trajectory_remmaper = std::make_shared<TrajectoryRemmaper>(options);
   rclcpp::spin(trajectory_remmaper);
   // rclcpp::executors::MultiThreadedExecutor executor;
   // executor.add_node(node);
@@ -146,13 +143,13 @@ int main(int argc, char *argv[])
   //                             { executor.spin(); });
 
   // // DDS
-  // cout << "Setting up DDS..." << endl;
+  // std::cout << "Setting up DDS..." << std::endl;
   // dds_ = new Dds("DenmNode", domain_id, on_message_dds);
   // dds_->subscribe("aw/in/cmd/steering_tire_angle");
   // dds_->subscribe("aw/in/cmd/acceleration");
   // dds_->subscribe("aw/in/cmd/speed");
   // dds_->subscribe("aw/in/cmd/hazard_lights");
-  // cout << "DDS set up" << endl;
+  // std::cout << "DDS set up" << std::endl;
 
   // while (rclcpp::ok())
   // {

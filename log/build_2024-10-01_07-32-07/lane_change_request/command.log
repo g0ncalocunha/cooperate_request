@@ -1,2 +1,0 @@
-Invoking command in '/home/goncalo/MECT1-1/bolsaIT/cooperate_request/build/lane_change_request': /usr/bin/cmake /home/goncalo/MECT1-1/bolsaIT/cooperate_request/src/lane_change_request -DCMAKE_INSTALL_PREFIX=/home/goncalo/MECT1-1/bolsaIT/cooperate_request/install/lane_change_request
-Invoked command in '/home/goncalo/MECT1-1/bolsaIT/cooperate_request/build/lane_change_request' returned '1': /usr/bin/cmake /home/goncalo/MECT1-1/bolsaIT/cooperate_request/src/lane_change_request -DCMAKE_INSTALL_PREFIX=/home/goncalo/MECT1-1/bolsaIT/cooperate_request/install/lane_change_request

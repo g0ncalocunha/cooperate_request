@@ -23,6 +23,10 @@ function _colcon_prefix_chain_powershell_source_script {
 
 # source chained prefixes
 _colcon_prefix_chain_powershell_source_script "/opt/ros/humble\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/pi/Fast-DDS-python/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/pi/amaral/vortex/worldmodel_test/vortex-interfaces-dev/vortex_std_msgs/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/pi/amaral/vortex/worldmodel_test/vortex-interfaces-dev/vortex_perception_msgs/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/pi/autoware/install\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)

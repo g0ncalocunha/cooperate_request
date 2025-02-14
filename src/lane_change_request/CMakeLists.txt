@@ -18,6 +18,7 @@ find_package(obstacle_avoidance_planner REQUIRED)
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 include_directories(
+  include
   ${tier4_planning_msgs_INCLUDE_DIRS}
   ${autoware_auto_planning_msgs_INCLUDE_DIRS}
   ${tier4_autoware_utils_INCLUDE_DIRS}
@@ -26,7 +27,8 @@ include_directories(
   ${obstacle_avoidance_planner_INCLUDE_DIRS}
 )
 add_executable(trajectory_remmaper src/main.cpp)
-ament_target_dependencies(rclcpp tier4_planning_msgs autoware_auto_planning_msgs)
+ament_target_dependencies(trajectory_remmaper rclcpp tier4_planning_msgs autoware_auto_planning_msgs tier4_autoware_utils vehicle_info_util motion_utils obstacle_avoidance_planner)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

@@ -1,0 +1,5 @@
+source;share/lane_change_request/local_setup.bash
+source;share/lane_change_request/local_setup.dsv
+source;share/lane_change_request/local_setup.ps1
+source;share/lane_change_request/local_setup.sh
+source;share/lane_change_request/local_setup.zsh

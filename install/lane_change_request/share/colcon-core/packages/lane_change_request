@@ -1,1 +1,1 @@
-rclpp:tier4_rtc_msgs:unique_identifier_msgs
+autoware_auto_planning_msgs:rclcpp_components:rclpp:tier4_planning_msgs:unique_identifier_msgs

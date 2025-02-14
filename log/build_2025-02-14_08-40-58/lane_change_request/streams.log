@@ -1,0 +1,9 @@
+[0.029s] Invoking command in '/home/pi/cooperate_request/build/lane_change_request': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/autoware/install/simulator_compatibility_test:/home/pi/autoware/install/ad_api_visualizers:/opt/ros/humble /usr/bin/cmake /home/pi/cooperate_request/src/lane_change_request -DCMAKE_INSTALL_PREFIX=/home/pi/cooperate_request/install/lane_change_request
+[0.052s] [31mCMake Error at CMakeLists.txt:28:
+[0.052s]   Parse error.  Expected a newline, got identifier with text
+[0.052s]   "ament_target_dependencies".
+[0.052s] 
+[0.052s] [0m
+[0.052s] -- Configuring incomplete, errors occurred!
+[0.052s] See also "/home/pi/cooperate_request/build/lane_change_request/CMakeFiles/CMakeOutput.log".
+[0.054s] Invoked command in '/home/pi/cooperate_request/build/lane_change_request' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/autoware/install/simulator_compatibility_test:/home/pi/autoware/install/ad_api_visualizers:/opt/ros/humble /usr/bin/cmake /home/pi/cooperate_request/src/lane_change_request -DCMAKE_INSTALL_PREFIX=/home/pi/cooperate_request/install/lane_change_request

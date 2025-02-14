@@ -36,29 +36,23 @@ enum class LaneChangeDirection
 };
 class TrajectoryRemmaper : public rclcpp::Node
 {
-  /**
-   * Modify an existing trajectory to perform a lane change
-   * @param input_trajectory Original trajectory points
-   * @param acceleration_profile Whether to modify velocity during lane change
-   * @return Modified trajectory points
-   */
-  static std::vector<TrajectoryPoint> modifyTrajectory(
-      const std::vector<TrajectoryPoint> &input_trajectory,
+  static autoware_auto_planning_msgs::msg::Trajectory modifyTrajectory(
+    autoware_auto_planning_msgs::msg::Trajectory &input_trajectory,
       LaneChangeDirection lane_change_direction, bool acceleration_profile = false)
   {
-    if (input_trajectory.empty())
+    if (input_trajectory.points.empty())
     {
       throw std::invalid_argument("Input trajectory cannot be empty");
     }
 
-    std::vector<TrajectoryPoint> modified_trajectory = input_trajectory;
+    autoware_auto_planning_msgs::msg::Trajectory modified_trajectory = input_trajectory;
 
     // Lane change dpositionirection multiplier
     double direction_multiplier = (lane_change_direction == LaneChangeDirection::LEFT) ? 1.0 : -1.0;
 
     // Calculate total trajectory time and length
-    double total_time = (modified_trajectory.back().pose.position.x - modified_trajectory.front().pose.position.x) /
-                        modified_trajectory.front().longitudinal_velocity_mps;
+    double total_time = (modified_trajectory.points.back().pose.position.x - modified_trajectory.points.front().pose.position.x) /
+                        modified_trajectory.points.front().longitudinal_velocity_mps;
 
     double lane_change_length = 3.5; // meters
 
@@ -72,8 +66,8 @@ class TrajectoryRemmaper : public rclcpp::Node
         6.0 * lane_change_length / (total_time * total_time * total_time * total_time * total_time);
 
     // Initial conditions
-    double initial_velocity = modified_trajectory.front().longitudinal_velocity_mps;
-    double target_velocity = modified_trajectory.back().longitudinal_velocity_mps;
+    double initial_velocity = modified_trajectory.points.front().longitudinal_velocity_mps;
+    double target_velocity = modified_trajectory.points.back().longitudinal_velocity_mps;
     double velocity_change = target_velocity - initial_velocity;
 
     double curvature = 0.0;
@@ -81,16 +75,16 @@ class TrajectoryRemmaper : public rclcpp::Node
     double wheel_base = 2.79;
     double rear_steering_ratio = -0.2;
 
-    for (size_t i = 0; i < modified_trajectory.size(); ++i)
+    for (size_t i = 0; i < modified_trajectory.points.size(); ++i)
     {
-      double t = i * (total_time / (modified_trajectory.size() - 1.0));
+      double t = i * (total_time / (modified_trajectory.points.size() - 1.0));
 
       // Lateral position calculation (5th-order polynomial with direction)
       double lateral_pos = direction_multiplier * (a0 + a1 * t + a2 * t * t + a3 * t * t * t +
                                                    a4 * t * t * t * t + a5 * t * t * t * t * t);
 
       // Modify y-coordinate for lane change
-      modified_trajectory[i].pose.position.y += lateral_pos;
+      modified_trajectory.points[i].pose.position.y += lateral_pos;
 
       // Velocity and acceleration calculations
       double current_velocity = initial_velocity;
@@ -113,8 +107,8 @@ class TrajectoryRemmaper : public rclcpp::Node
         }
 
         // Update velocity and acceleration in trajectory point
-        modified_trajectory[i].longitudinal_velocity_mps = current_velocity;
-        modified_trajectory[i].acceleration_mps2 = current_acceleration;
+        modified_trajectory.points[i].longitudinal_velocity_mps = current_velocity;
+        modified_trajectory.points[i].acceleration_mps2 = current_acceleration;
       }
 
       // Curvature approximation
@@ -126,7 +120,7 @@ class TrajectoryRemmaper : public rclcpp::Node
               1.5));
 
       // Heading rate calculation
-      modified_trajectory[i].heading_rate_rps = modified_trajectory[i].longitudinal_velocity_mps * curvature;
+      modified_trajectory.points[i].heading_rate_rps = modified_trajectory.points[i].longitudinal_velocity_mps * curvature;
 
       // // Yaw calculation for wheel angle
       // yaw = std::atan2(
@@ -135,12 +129,12 @@ class TrajectoryRemmaper : public rclcpp::Node
       //   modified_trajectory[i].longitudinal_velocity_mps);
 
       // Wheel angle calculation using wheelbase and rear steering ratio
-      modified_trajectory[i].front_wheel_angle_rad = std::atan(curvature * wheel_base);
-      modified_trajectory[i].rear_wheel_angle_rad = rear_steering_ratio * modified_trajectory[i].front_wheel_angle_rad;
+      modified_trajectory.points[i].front_wheel_angle_rad = std::atan(curvature * wheel_base);
+      modified_trajectory.points[i].rear_wheel_angle_rad = rear_steering_ratio * modified_trajectory.points[i].front_wheel_angle_rad;
 
       // Preserve remaining trajectory information
-      modified_trajectory[i].pose.position.z = input_trajectory[i].pose.position.z;
-      modified_trajectory[i].pose.orientation = input_trajectory[i].pose.orientation;
+      modified_trajectory.points[i].pose.position.z = input_trajectory.points[i].pose.position.z;
+      modified_trajectory.points[i].pose.orientation = input_trajectory.points[i].pose.orientation;
     }
 
     return modified_trajectory;
@@ -150,28 +144,34 @@ class TrajectoryRemmaper : public rclcpp::Node
    * Validate and print trajectory modification details
    */
   static void validateTrajectoryModification(
-      const std::vector<TrajectoryPoint> &original_trajectory,
-      const std::vector<TrajectoryPoint> &modified_trajectory)
+      const autoware_auto_planning_msgs::msg::Trajectory &original_trajectory,
+      const autoware_auto_planning_msgs::msg::Trajectory &modified_trajectory)
   {
-    if (original_trajectory.size() != modified_trajectory.size())
+    if (original_trajectory.points.size() != modified_trajectory.points.size())
     {
       throw std::runtime_error("Trajectory sizes do not match");
     }
 
     // Validate key characteristics
-    double lateral_change = std::abs(modified_trajectory.back().pose.position.y - original_trajectory.back().pose.position.y);
+    double lateral_change = std::abs(modified_trajectory.points.back().pose.position.y - original_trajectory.points.back().pose.position.y);
 
     std::cout << "Trajectory Modification Details:" << std::endl;
-    std::cout << "Total Points: " << modified_trajectory.size() << std::endl;
+    std::cout << "Total Points: " << modified_trajectory.points.size() << std::endl;
     std::cout << "Lateral Displacement: " << lateral_change << " meters" << std::endl;
-    std::cout << "Initial Position: (" << original_trajectory.front().pose.position.x << ", "
-              << original_trajectory.front().pose.position.y << ")" << std::endl;
-    std::cout << "Final Position: (" << modified_trajectory.back().pose.position.x << ", "
-              << modified_trajectory.back().pose.position.y << ")" << std::endl;
+    std::cout << "Initial Position: (" << original_trajectory.points.front().pose.position.x << ", "
+              << original_trajectory.points.front().pose.position.y << ")" << std::endl;
+    std::cout << "Final Position: (" << modified_trajectory.points.back().pose.position.x << ", "
+              << modified_trajectory.points.back().pose.position.y << ")" << std::endl;
   }
 
 public:
   explicit TrajectoryRemmaper(const rclcpp::NodeOptions &node_options);
+
+private:
+void trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory::SharedPtr msg) const;
+
+rclcpp::Publisher<autoware_auto_planning_msgs::msg::Trajectory>::SharedPtr traj_pub;
+rclcpp::Subscription<autoware_auto_planning_msgs::msg::Trajectory>::SharedPtr traj_sub;
 }
 
 #endif // TRAJECTORY_REMMAPER__NODE_HPP_

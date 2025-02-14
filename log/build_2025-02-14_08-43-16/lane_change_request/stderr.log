@@ -1,0 +1,377 @@
+In file included from [01m[K/usr/include/boost/math/tools/cxx03_warn.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/constants/constants.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/geometry/util/math.hpp:29[m[K,
+                 from [01m[K/usr/include/boost/geometry/util/is_inverse_spheroidal_coordinates.hpp:19[m[K,
+                 from [01m[K/usr/include/boost/geometry/algorithms/detail/assign_values.hpp:42[m[K,
+                 from [01m[K/usr/include/boost/geometry/algorithms/detail/assign_box_corners.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/geometry/algorithms/convert.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/geometry/geometries/box.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/geometry/geometries/geometries.hpp:25[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/boost_geometry.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:23[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/usr/include/boost/detail/no_exceptions_support.hpp:17:1:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: This header is deprecated. Use <boost/core/no_exceptions_support.hpp> instead.[m[K’
+   17 | [01;36m[KBOOST_HEADER_DEPRECATED[m[K("<boost/core/no_exceptions_support.hpp>")
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:45:22:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryPoint[m[K’ was not declared in this scope
+   45 |   static std::vector<[01;31m[KTrajectoryPoint[m[K> modifyTrajectory(
+      |                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:45:22:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory__struct.hpp:22[m[K,
+                 from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/trajectory.hpp:7[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:32[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+  239 | using [01;36m[KTrajectoryPoint[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+In file included from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:45:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   45 |   static std::vector<TrajectoryPoint[01;31m[K>[m[K modifyTrajectory(
+      |                                     [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:45:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:46:25:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryPoint[m[K’ was not declared in this scope
+   46 |       const std::vector<[01;31m[KTrajectoryPoint[m[K> &input_trajectory,
+      |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:46:25:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory__struct.hpp:22[m[K,
+                 from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/trajectory.hpp:7[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:32[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+  239 | using [01;36m[KTrajectoryPoint[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+In file included from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:46:40:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   46 |       const std::vector<TrajectoryPoint[01;31m[K>[m[K &input_trajectory,
+      |                                        [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:46:40:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:153:25:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryPoint[m[K’ was not declared in this scope
+  153 |       const std::vector<[01;31m[KTrajectoryPoint[m[K> &original_trajectory,
+      |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:153:25:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory__struct.hpp:22[m[K,
+                 from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/trajectory.hpp:7[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:32[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+  239 | using [01;36m[KTrajectoryPoint[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+In file included from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:153:40:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  153 |       const std::vector<TrajectoryPoint[01;31m[K>[m[K &original_trajectory,
+      |                                        [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:153:40:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:154:25:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryPoint[m[K’ was not declared in this scope
+  154 |       const std::vector<[01;31m[KTrajectoryPoint[m[K> &modified_trajectory)
+      |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:154:25:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory__struct.hpp:22[m[K,
+                 from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/trajectory.hpp:7[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:32[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+  239 | using [01;36m[KTrajectoryPoint[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+In file included from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:154:40:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  154 |       const std::vector<TrajectoryPoint[01;31m[K>[m[K &modified_trajectory)
+      |                                        [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:154:40:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:[m[K In static member function ‘[01m[Kstatic int TrajectoryRemmaper::modifyTrajectory(const int&, LaneChangeDirection, bool)[m[K’:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:49:26:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kempty[m[K’ in ‘[01m[Kinput_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+   49 |     if (input_trajectory.[01;31m[Kempty[m[K())
+      |                          [01;31m[K^~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:54:17:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryPoint[m[K’ was not declared in this scope
+   54 |     std::vector<[01;31m[KTrajectoryPoint[m[K> modified_trajectory = input_trajectory;
+      |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:54:17:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory__struct.hpp:22[m[K,
+                 from [01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/trajectory.hpp:7[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:32[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+  239 | using [01;36m[KTrajectoryPoint[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/autoware/build/autoware_auto_planning_msgs/rosidl_generator_cpp/autoware_auto_planning_msgs/msg/detail/trajectory_point__struct.hpp:239:7:[m[K [01;36m[Knote: [m[K  ‘[01m[Kautoware_auto_planning_msgs::msg::TrajectoryPoint[m[K’
+In file included from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:54:32:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   54 |     std::vector<TrajectoryPoint[01;31m[K>[m[K modified_trajectory = input_trajectory;
+      |                                [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:54:32:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:60:46:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kback[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   60 |     double total_time = (modified_trajectory.[01;31m[Kback[m[K().pose.position.x - modified_trajectory.front().pose.position.x) /
+      |                                              [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:60:91:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfront[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   60 |     double total_time = (modified_trajectory.back().pose.position.x - modified_trajectory.[01;31m[Kfront[m[K().pose.position.x) /
+      |                                                                                           [01;31m[K^~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:61:45:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfront[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   61 |                         modified_trajectory.[01;31m[Kfront[m[K().longitudinal_velocity_mps;
+      |                                             [01;31m[K^~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:75:51:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfront[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   75 |     double initial_velocity = modified_trajectory.[01;31m[Kfront[m[K().longitudinal_velocity_mps;
+      |                                                   [01;31m[K^~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:76:50:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kback[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   76 |     double target_velocity = modified_trajectory.[01;31m[Kback[m[K().longitudinal_velocity_mps;
+      |                                                  [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:84:48:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   84 |     for (size_t i = 0; i < modified_trajectory.[01;31m[Ksize[m[K(); ++i)
+      |                                                [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:86:57:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   86 |       double t = i * (total_time / (modified_trajectory.[01;31m[Ksize[m[K() - 1.0));
+      |                                                         [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:93:26:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+   93 |       modified_trajectory[01;31m[K[[m[Ki].pose.position.y += lateral_pos;
+      |                          [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:116:28:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  116 |         modified_trajectory[01;31m[K[[m[Ki].longitudinal_velocity_mps = current_velocity;
+      |                            [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:117:28:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  117 |         modified_trajectory[01;31m[K[[m[Ki].acceleration_mps2 = current_acceleration;
+      |                            [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:129:26:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  129 |       modified_trajectory[01;31m[K[[m[Ki].heading_rate_rps = modified_trajectory[i].longitudinal_velocity_mps * curvature;
+      |                          [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:129:68:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  129 |       modified_trajectory[i].heading_rate_rps = modified_trajectory[01;31m[K[[m[Ki].longitudinal_velocity_mps * curvature;
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:138:26:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  138 |       modified_trajectory[01;31m[K[[m[Ki].front_wheel_angle_rad = std::atan(curvature * wheel_base);
+      |                          [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:139:26:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  139 |       modified_trajectory[01;31m[K[[m[Ki].rear_wheel_angle_rad = rear_steering_ratio * modified_trajectory[i].front_wheel_angle_rad;
+      |                          [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:139:94:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  139 |       modified_trajectory[i].rear_wheel_angle_rad = rear_steering_ratio * modified_trajectory[01;31m[K[[m[Ki].front_wheel_angle_rad;
+      |                                                                                              [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:142:26:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  142 |       modified_trajectory[01;31m[K[[m[Ki].pose.position.z = input_trajectory[i].pose.position.z;
+      |                          [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:142:64:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kconst int[size_t {aka long unsigned int}][m[K’ for array subscript
+  142 |       modified_trajectory[i].pose.position.z = input_trajectory[01;31m[K[[m[Ki].pose.position.z;
+      |                                                                [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:143:26:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kint[size_t {aka long unsigned int}][m[K’ for array subscript
+  143 |       modified_trajectory[01;31m[K[[m[Ki].pose.orientation = input_trajectory[i].pose.orientation;
+      |                          [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:143:65:[m[K [01;31m[Kerror: [m[Kinvalid types ‘[01m[Kconst int[size_t {aka long unsigned int}][m[K’ for array subscript
+  143 |       modified_trajectory[i].pose.orientation = input_trajectory[01;31m[K[[m[Ki].pose.orientation;
+      |                                                                 [01;31m[K^[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:[m[K In static member function ‘[01m[Kstatic void TrajectoryRemmaper::validateTrajectoryModification(const int&, const int&)[m[K’:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:156:29:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[Koriginal_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  156 |     if (original_trajectory.[01;31m[Ksize[m[K() != modified_trajectory.size())
+      |                             [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:156:59:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  156 |     if (original_trajectory.size() != modified_trajectory.[01;31m[Ksize[m[K())
+      |                                                           [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:162:58:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kback[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  162 |     double lateral_change = std::abs(modified_trajectory.[01;31m[Kback[m[K().pose.position.y - original_trajectory.back().pose.position.y);
+      |                                                          [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:162:103:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kback[m[K’ in ‘[01m[Koriginal_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  162 |     double lateral_change = std::abs(modified_trajectory.back().pose.position.y - original_trajectory.[01;31m[Kback[m[K().pose.position.y);
+      |                                                                                                       [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:165:58:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksize[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  165 |     std::cout << "Total Points: " << modified_trajectory.[01;31m[Ksize[m[K() << std::endl;
+      |                                                          [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:167:63:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfront[m[K’ in ‘[01m[Koriginal_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  167 |     std::cout << "Initial Position: (" << original_trajectory.[01;31m[Kfront[m[K().pose.position.x << ", "
+      |                                                               [01;31m[K^~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:168:38:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kfront[m[K’ in ‘[01m[Koriginal_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  168 |               << original_trajectory.[01;31m[Kfront[m[K().pose.position.y << ")" << std::endl;
+      |                                      [01;31m[K^~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:169:61:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kback[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  169 |     std::cout << "Final Position: (" << modified_trajectory.[01;31m[Kback[m[K().pose.position.x << ", "
+      |                                                             [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:170:38:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kback[m[K’ in ‘[01m[Kmodified_trajectory[m[K’, which is of non-class type ‘[01m[Kconst int[m[K’
+  170 |               << modified_trajectory.[01;31m[Kback[m[K().pose.position.y << ")" << std::endl;
+      |                                      [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K At global scope:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:19:21:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Klane_change_direction[m[K’
+   19 | LaneChangeDirection [01;31m[Klane_change_direction[m[K = LEFT;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K In constructor ‘[01m[KTrajectoryRemmaper::TrajectoryRemmaper(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:25:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KTrajectoryRemmaper[m[K’ does not have any field named ‘[01m[Kvehicle_info_[m[K’
+   25 |       [01;31m[Kvehicle_info_[m[K(vehicle_info_util::VehicleInfoUtil(*this).getVehicleInfo()),
+      |       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:26:7:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KTrajectoryRemmaper[m[K’ does not have any field named ‘[01m[Ktime_keeper_ptr_[m[K’
+   26 |       [01;31m[Ktime_keeper_ptr_[m[K(std::make_shared<TimeKeeper>())
+      |       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:26:41:[m[K [01;31m[Kerror: [m[K‘[01m[KTimeKeeper[m[K’ was not declared in this scope; did you mean ‘[01m[Kobstacle_avoidance_planner::TimeKeeper[m[K’?
+   26 |       time_keeper_ptr_(std::make_shared<[01;31m[KTimeKeeper[m[K>())
+      |                                         [01;31m[K^~~~~~~~~~[m[K
+      |                                         [32m[Kobstacle_avoidance_planner::TimeKeeper[m[K
+In file included from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/home/pi/autoware/install/obstacle_avoidance_planner/include/obstacle_avoidance_planner/common_structs.hpp:45:8:[m[K [01;36m[Knote: [m[K‘[01m[Kobstacle_avoidance_planner::TimeKeeper[m[K’ declared here
+   45 | struct [01;36m[KTimeKeeper[m[K
+      |        [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:26:52:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+   26 |       time_keeper_ptr_([01;31m[Kstd::make_shared<TimeKeeper>()[m[K)
+      |                        [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/usr/include/boost/geometry/geometries/linestring.hpp:18[m[K,
+                 from [01m[K/usr/include/boost/geometry/geometries/geometries.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/boost_geometry.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:23[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:26:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   26 |       time_keeper_ptr_([01;31m[Kstd::make_shared<TimeKeeper>()[m[K)
+      |                        [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:29:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_pub[m[K’ was not declared in this scope
+   29 |   [01;31m[Ktraj_pub[m[K = create_publisher<autoware_auto_msgs::msg::Trajectory>("~/output/path", 1);
+      |   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:29:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kautoware_auto_msgs[m[K’ was not declared in this scope; did you mean ‘[01m[Kautoware_auto_planning_msgs[m[K’?
+   29 |   traj_pub = create_publisher<[01;31m[Kautoware_auto_msgs[m[K::msg::Trajectory>("~/output/path", 1);
+      |                               [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                               [32m[Kautoware_auto_planning_msgs[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:29:14:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   29 |   traj_pub = [01;31m[Kcreate_publisher<autoware_auto_msgs::msg::Trajectory>[m[K("~/output/path", 1);
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:29:67:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTrajectoryRemmaper::create_publisher<<expression error> >(const char [14], int)[m[K’
+   29 |   traj_pub = [01;31m[Kcreate_publisher<autoware_auto_msgs::msg::Trajectory>("~/output/path", 1)[m[K;
+      |              [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:59[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:47[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   73 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:29:67:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   29 |   traj_pub = [01;31m[Kcreate_publisher<autoware_auto_msgs::msg::Trajectory>("~/output/path", 1)[m[K;
+      |              [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:32:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_sub[m[K’ was not declared in this scope
+   32 |   [01;31m[Ktraj_sub[m[K = create_subscription<autoware_auto_msgs::msg::Trajectory>(
+      |   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:32:14:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   32 |   traj_sub = [01;31m[Kcreate_subscription<autoware_auto_msgs::msg::Trajectory>[m[K(
+      |              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:33:36:[m[K [01;31m[Kerror: [m[K‘[01m[KtrajectoryCallback[m[K’ was not declared in this scope
+   33 |       "~/output/remmaped_path", 1, [01;31m[KtrajectoryCallback[m[K);
+      |                                    [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K At global scope:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:92:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+   92 | [01;31m[Kprivate[m[K:
+      | [01;31m[K^~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:113:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::cout[m[K’?
+  113 |   [01;31m[Kcout[m[K << "Starting Trajectory-Remapper..." << endl;
+      |   [01;31m[K^~~~[m[K
+      |   [32m[Kstd::cout[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.h:48[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:59[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:47[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/usr/include/c++/11/iostream:61:18:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ declared here
+   61 |   extern ostream [01;36m[Kcout[m[K;          /// Linked to standard output
+      |                  [01;36m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:113:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::endl[m[K’?
+  113 |   cout << "Starting Trajectory-Remapper..." << [01;31m[Kendl[m[K;
+      |                                                [01;31m[K^~~~[m[K
+      |                                                [32m[Kstd::endl[m[K
+In file included from [01m[K/usr/include/boost/range/iterator_range_io.hpp:32[m[K,
+                 from [01m[K/usr/include/boost/range/iterator_range.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/range.hpp:20[m[K,
+                 from [01m[K/usr/include/boost/geometry/geometries/linestring.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/geometry/geometries/geometries.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/boost_geometry.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:23[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+[01m[K/usr/include/c++/11/ostream:684:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::endl[m[K’ declared here
+  684 |     [01;36m[Kendl[m[K(basic_ostream<_CharT, _Traits>& __os)
+      |     [01;36m[K^~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:33[m[K,
+                 from [01m[K/usr/include/c++/11/bits/allocator.h:46[m[K,
+                 from [01m[K/usr/include/c++/11/string:41[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/include/lane_change_request/lane.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:15[m[K:
+/usr/include/c++/11/ext/new_allocator.h: In instantiation of ‘[01m[Kvoid __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = TrajectoryRemmaper; _Args = {}; _Tp = TrajectoryRemmaper][m[K’:
+[01m[K/usr/include/c++/11/bits/alloc_traits.h:516:17:[m[K   required from ‘[01m[Kstatic void std::allocator_traits<std::allocator<_CharT> >::construct(std::allocator_traits<std::allocator<_CharT> >::allocator_type&, _Up*, _Args&& ...) [with _Up = TrajectoryRemmaper; _Args = {}; _Tp = TrajectoryRemmaper; std::allocator_traits<std::allocator<_CharT> >::allocator_type = std::allocator<TrajectoryRemmaper>][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:519:39:[m[K   required from ‘[01m[Kstd::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {}; _Tp = TrajectoryRemmaper; _Alloc = std::allocator<TrajectoryRemmaper>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:650:16:[m[K   required from ‘[01m[Kstd::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = TrajectoryRemmaper; _Alloc = std::allocator<TrajectoryRemmaper>; _Args = {}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr_base.h:1342:14:[m[K   required from ‘[01m[Kstd::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<TrajectoryRemmaper>; _Args = {}; _Tp = TrajectoryRemmaper; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:409:59:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<TrajectoryRemmaper>; _Args = {}; _Tp = TrajectoryRemmaper][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:862:14:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::allocate_shared(const _Alloc&, _Args&& ...) [with _Tp = TrajectoryRemmaper; _Alloc = std::allocator<TrajectoryRemmaper>; _Args = {}][m[K’
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:878:39:[m[K   required from ‘[01m[Kstd::shared_ptr<_Tp> std::make_shared(_Args&& ...) [with _Tp = TrajectoryRemmaper; _Args = {}][m[K’
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:140:66:[m[K   required from here
+[01m[K/usr/include/c++/11/ext/new_allocator.h:162:11:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTrajectoryRemmaper::TrajectoryRemmaper()[m[K’
+  162 |         { [01;31m[K::new((void *)__p) _Up(std::forward<_Args>(__args)...)[m[K; }
+      |           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:23:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KTrajectoryRemmaper::TrajectoryRemmaper(const rclcpp::NodeOptions&)[m[K’
+   23 | [01;36m[KTrajectoryRemmaper[m[K::TrajectoryRemmaper(const rclcpp::NodeOptions &node_options)
+      | [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:23:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+gmake[2]: *** [CMakeFiles/trajectory_remmaper.dir/build.make:76: CMakeFiles/trajectory_remmaper.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/trajectory_remmaper.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
