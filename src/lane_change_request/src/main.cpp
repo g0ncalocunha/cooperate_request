@@ -86,7 +86,7 @@ TrajectoryRemmaper::TrajectoryRemmaper(const rclcpp::NodeOptions &node_options)
 //   traj_pub_->publish(output_traj_msg);
 // }
 
-void TrajectoryRemmaper::trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory &msg) const
+void TrajectoryRemmaper::trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory::SharedPtr &msg) const
 {
   autoware_auto_planning_msgs::msg::Trajectory new_trajectory = msg;
   autoware_auto_planning_msgs::msg::Trajectory modified_trajectory = autoware_auto_planning_msgs::msg::Trajectory();
