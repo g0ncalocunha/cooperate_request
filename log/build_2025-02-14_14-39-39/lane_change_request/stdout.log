@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target trajectory_remmaper[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/trajectory_remmaper.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable trajectory_remmaper[0m
+[100%] Built target trajectory_remmaper
+-- Install configuration: ""
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/lib/lane_change_request/trajectory_remmaper
+-- Set runtime path of "/home/pi/cooperate_request/install/lane_change_request/lib/lane_change_request/trajectory_remmaper" to ""
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/package_run_dependencies/lane_change_request
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/parent_prefix_path/lane_change_request
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/ament_prefix_path.sh
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/ament_prefix_path.dsv
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/path.sh
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/path.dsv
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.bash
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.sh
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.zsh
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.dsv
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/package.dsv
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/packages/lane_change_request
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/cmake/lane_change_requestConfig.cmake
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/cmake/lane_change_requestConfig-version.cmake
+-- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/package.xml

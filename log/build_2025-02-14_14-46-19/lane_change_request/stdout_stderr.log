@@ -1,0 +1,64 @@
+[35m[1mConsolidate compiler generated dependencies of target trajectory_remmaper[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/trajectory_remmaper.dir/src/main.cpp.o[0m
+In file included from [01m[K/usr/include/boost/math/tools/cxx03_warn.hpp:9[m[K,
+                 from [01m[K/usr/include/boost/math/constants/constants.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/geometry/util/math.hpp:29[m[K,
+                 from [01m[K/usr/include/boost/geometry/util/is_inverse_spheroidal_coordinates.hpp:19[m[K,
+                 from [01m[K/usr/include/boost/geometry/algorithms/detail/assign_values.hpp:42[m[K,
+                 from [01m[K/usr/include/boost/geometry/algorithms/detail/assign_box_corners.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/geometry/algorithms/convert.hpp:38[m[K,
+                 from [01m[K/usr/include/boost/geometry/geometries/box.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/geometry/geometries/geometries.hpp:25[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/boost_geometry.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/tier4_autoware_utils/include/tier4_autoware_utils/geometry/geometry.hpp:23[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/trajectory/trajectory.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/resample/resample_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/marker/marker_helper.hpp:18[m[K,
+                 from [01m[K/home/pi/autoware/install/motion_utils/include/motion_utils/motion_utils.hpp:19[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:20[m[K:
+[01m[K/usr/include/boost/detail/no_exceptions_support.hpp:17:1:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: This header is deprecated. Use <boost/core/no_exceptions_support.hpp> instead.[m[K’
+   17 | [01;36m[KBOOST_HEADER_DEPRECATED[m[K("<boost/core/no_exceptions_support.hpp>")
+      | [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:42:3:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Ktrajectory_remap_node::TrajectoryRemapper::[m[K’ on member ‘[01m[KTrajectoryRemapper[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   42 |   [01;31m[KTrajectoryRemapper[m[K::TrajectoryRemapper(const rclcpp::NodeOptions &node_options)
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K In constructor ‘[01m[Ktrajectory_remap_node::TrajectoryRemapper::TrajectoryRemapper(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:46:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_pub[m[K’ was not declared in this scope
+   46 |     [01;31m[Ktraj_pub[m[K = create_publisher<autoware_auto_planning_msgs::msg::Trajectory>("~/output/path", 1);
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:49:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_sub[m[K’ was not declared in this scope
+   49 |     [01;31m[Ktraj_sub[m[K = create_subscription<autoware_auto_planning_msgs::msg::Trajectory>(
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:50:69:[m[K [01;31m[Kerror: [m[K‘[01m[KtrajectoryCallback[m[K’ is not a member of ‘[01m[Ktrajectory_remap_node::TrajectoryRemapper[m[K’
+   50 |         "~/output/remmaped_path", 1, std::bind(&TrajectoryRemapper::[01;31m[KtrajectoryCallback[m[K, this, std::placeholders::_1));
+      |                                                                     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K At global scope:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:236:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid trajectory_remap_node::TrajectoryRemapper::trajectoryCallback(autoware_auto_planning_msgs::msg::Trajectory_<std::allocator<void> >::SharedPtr)[m[K’
+  236 | void [01;31m[KTrajectoryRemapper[m[K::trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory::SharedPtr msg)
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:236:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid trajectory_remap_node::TrajectoryRemapper::trajectoryCallback(autoware_auto_planning_msgs::msg::Trajectory_<std::allocator<void> >::SharedPtr)[m[K’
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:40:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass trajectory_remap_node::TrajectoryRemapper[m[K’ defined here
+   40 | class [01;36m[KTrajectoryRemapper[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:286:47:[m[K [01;31m[Kerror: [m[K‘[01m[KtrajectroTrajectoryRemapper[m[K’ was not declared in this scope
+  286 |   auto trajectory_remapper = std::make_shared<[01;31m[KtrajectroTrajectoryRemapper[m[K>(options);
+      |                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:286:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >(rclcpp::NodeOptions&)[m[K’
+  286 |   auto trajectory_remapper = [01;31m[Kstd::make_shared<trajectroTrajectoryRemapper>(options)[m[K;
+      |                              [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:10[m[K,
+                 from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:18[m[K,
+                 from [01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:16[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  875 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:875:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:286:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  286 |   auto trajectory_remapper = [01;31m[Kstd::make_shared<trajectroTrajectoryRemapper>(options)[m[K;
+      |                              [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/trajectory_remmaper.dir/build.make:76: CMakeFiles/trajectory_remmaper.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/trajectory_remmaper.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

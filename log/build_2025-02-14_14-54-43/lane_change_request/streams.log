@@ -1,0 +1,26 @@
+[0.029s] Invoking command in '/home/pi/cooperate_request/build/lane_change_request': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/autoware/install/simulator_compatibility_test:/home/pi/autoware/install/ad_api_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/pi/cooperate_request/build/lane_change_request -- -j24 -l24
+[0.152s] [35m[1mConsolidate compiler generated dependencies of target trajectory_remmaper[0m
+[0.212s] [ 50%] [32mBuilding CXX object CMakeFiles/trajectory_remmaper.dir/src/main.cpp.o[0m
+[5.856s] [100%] [32m[1mLinking CXX executable trajectory_remmaper[0m
+[6.288s] [100%] Built target trajectory_remmaper
+[6.313s] Invoked command in '/home/pi/cooperate_request/build/lane_change_request' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/autoware/install/simulator_compatibility_test:/home/pi/autoware/install/ad_api_visualizers:/opt/ros/humble /usr/bin/cmake --build /home/pi/cooperate_request/build/lane_change_request -- -j24 -l24
+[6.453s] Invoking command in '/home/pi/cooperate_request/build/lane_change_request': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/autoware/install/simulator_compatibility_test:/home/pi/autoware/install/ad_api_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/pi/cooperate_request/build/lane_change_request
+[6.474s] -- Install configuration: ""
+[6.474s] -- Installing: /home/pi/cooperate_request/install/lane_change_request/lib/lane_change_request/trajectory_remmaper
+[6.478s] -- Set runtime path of "/home/pi/cooperate_request/install/lane_change_request/lib/lane_change_request/trajectory_remmaper" to ""
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/package_run_dependencies/lane_change_request
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/parent_prefix_path/lane_change_request
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/ament_prefix_path.sh
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/ament_prefix_path.dsv
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/path.sh
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/path.dsv
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.bash
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.sh
+[6.478s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.zsh
+[6.479s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.dsv
+[6.479s] -- Installing: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/package.dsv
+[6.479s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/packages/lane_change_request
+[6.479s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/cmake/lane_change_requestConfig.cmake
+[6.479s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/cmake/lane_change_requestConfig-version.cmake
+[6.479s] -- Up-to-date: /home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/package.xml
+[6.480s] Invoked command in '/home/pi/cooperate_request/build/lane_change_request' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pi/autoware/install/simulator_compatibility_test:/home/pi/autoware/install/ad_api_visualizers:/opt/ros/humble /usr/bin/cmake --install /home/pi/cooperate_request/build/lane_change_request

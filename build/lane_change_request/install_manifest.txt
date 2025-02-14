@@ -1,0 +1,16 @@
+/home/pi/cooperate_request/install/lane_change_request/lib/lane_change_request/trajectory_remmaper
+/home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/package_run_dependencies/lane_change_request
+/home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/parent_prefix_path/lane_change_request
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/ament_prefix_path.sh
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/ament_prefix_path.dsv
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/path.sh
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/environment/path.dsv
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.bash
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.sh
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.zsh
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/local_setup.dsv
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/package.dsv
+/home/pi/cooperate_request/install/lane_change_request/share/ament_index/resource_index/packages/lane_change_request
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/cmake/lane_change_requestConfig.cmake
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/cmake/lane_change_requestConfig-version.cmake
+/home/pi/cooperate_request/install/lane_change_request/share/lane_change_request/package.xml

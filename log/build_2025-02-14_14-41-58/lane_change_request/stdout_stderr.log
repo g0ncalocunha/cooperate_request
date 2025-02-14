@@ -1,0 +1,47 @@
+[35m[1mConsolidate compiler generated dependencies of target trajectory_remmaper[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/trajectory_remmaper.dir/src/main.cpp.o[0m
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:27:1:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryRemapper[m[K’ does not name a type
+   27 | [01;31m[KTrajectoryRemapper[m[K::TrajectoryRemapper(const rclcpp::NodeOptions &node_options)
+      | [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:92:6:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryRemapper[m[K’ has not been declared
+   92 | void [01;31m[KTrajectoryRemapper[m[K::trajectoryCallback(const autoware_auto_planning_msgs::msg::Trajectory::SharedPtr msg)
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K In function ‘[01m[Kvoid trajectory_remap_node::trajectoryCallback(autoware_auto_planning_msgs::msg::Trajectory_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:99:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_pub[m[K’ was not declared in this scope
+   99 |     [01;31m[Ktraj_pub[m[K->publish(new_trajectory);
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:105:27:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryRemapper[m[K’ has not been declared
+  105 |     modified_trajectory = [01;31m[KTrajectoryRemapper[m[K::modifyTrajectory(new_trajectory,lane_change_direction, acceleration_profile);
+      |                           [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:106:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktraj_pub[m[K’ was not declared in this scope
+  106 |     [01;31m[Ktraj_pub[m[K->publish(modified_trajectory);
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:114:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ is not a member of ‘[01m[Kstd[m[K’
+  114 |   std::[01;31m[Kcout[m[K << "Starting Trajectory-Remapper..." << std::endl;
+      |        [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:19:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ is defined in header ‘[01m[K<iostream>[m[K’; did you forget to ‘[01m[K#include <iostream>[m[K’?
+   18 | #include "autoware_auto_planning_msgs/msg/trajectory_point.hpp"
+  +++ |+[32m[K#include <iostream>[m[K
+   19 | 
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:140:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kinit[m[K’ is not a member of ‘[01m[Krclcpp[m[K’
+  140 |   rclcpp::[01;31m[Kinit[m[K(argc, argv);
+      |           [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:141:11:[m[K [01;31m[Kerror: [m[K‘[01m[KNodeOptions[m[K’ is not a member of ‘[01m[Krclcpp[m[K’
+  141 |   rclcpp::[01;31m[KNodeOptions[m[K options;
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:142:70:[m[K [01;31m[Kerror: [m[K‘[01m[KTrajectoryRemapper[m[K’ is not a member of ‘[01m[Ktrajectory_remap_node[m[K’
+  142 |   auto trajectory_remapper = std::make_shared<trajectory_remap_node::[01;31m[KTrajectoryRemapper[m[K>(options);
+      |                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:142:90:[m[K [01;31m[Kerror: [m[K‘[01m[Koptions[m[K’ was not declared in this scope
+  142 |   auto trajectory_remapper = std::make_shared<trajectory_remap_node::TrajectoryRemapper>([01;31m[Koptions[m[K);
+      |                                                                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:143:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kspin[m[K’ is not a member of ‘[01m[Krclcpp[m[K’
+  143 |   rclcpp::[01;31m[Kspin[m[K(trajectory_remapper);
+      |           [01;31m[K^~~~[m[K
+[01m[K/home/pi/cooperate_request/src/lane_change_request/src/main.cpp:170:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kshutdown[m[K’ is not a member of ‘[01m[Krclcpp[m[K’
+  170 |   rclcpp::[01;31m[Kshutdown[m[K();
+      |           [01;31m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/trajectory_remmaper.dir/build.make:76: CMakeFiles/trajectory_remmaper.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/trajectory_remmaper.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
