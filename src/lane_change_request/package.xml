@@ -9,7 +9,9 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <depend>rclpp</depend>
-  <depend>tier4_rtc_msgs</depend>
+  <depend>rclcpp_components</depend>
+  <depend>autoware_auto_planning_msgs</depend>
+  <depend>tier4_planning_msgs</depend>
   <depend>unique_identifier_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>

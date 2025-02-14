@@ -8,16 +8,25 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(tier4_rtc_msgs REQUIRED)
-find_package(unique_identifier_msgs REQUIRED)
+find_package(tier4_planning_msgs REQUIRED)
+find_package(autoware_auto_planning_msgs REQUIRED)
+find_package(tier4_autoware_utils REQUIRED)
+find_package(vehicle_info_util REQUIRED)
+find_package(motion_utils REQUIRED)
+find_package(obstacle_avoidance_planner REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 include_directories(
-  ${tier4_rtc_msgs_INCLUDE_DIRS}
+  ${tier4_planning_msgs_INCLUDE_DIRS}
+  ${autoware_auto_planning_msgs_INCLUDE_DIRS}
+  ${tier4_autoware_utils_INCLUDE_DIRS}
+  ${vehicle_info_util_INCLUDE_DIRS}
+  ${motion_utils_INCLUDE_DIRS}
+  ${obstacle_avoidance_planner_INCLUDE_DIRS}
 )
-add_executable(lane_change src/lane_change_client.cpp)
-ament_target_dependencies(lane_change rclcpp tier4_rtc_msgs unique_identifier_msgs)
+add_executable(trajectory_remmaper src/main.cpp)
+ament_target_dependencies(rclcpp tier4_planning_msgs autoware_auto_planning_msgs)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -30,5 +39,9 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(TARGETS
+  trajectory_remmaper
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
